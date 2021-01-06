@@ -27,7 +27,7 @@ function addArtist() {
     // Send the new artist to the server as data
     $.ajax({
         method: 'POST',
-        url: '/artist',
+        url: '/jazzyRouter',
         data: artistToSend
     }).then(function(response) {
         console.log(response);
@@ -51,7 +51,7 @@ function addSong() {
     // Send the new artist to the server as data
     $.ajax({
         method: 'POST',
-        url: '/song',
+        url: '/jazzyRouter',
         data: newSong
     }).then(function(response) {
         console.log(response);
@@ -66,7 +66,7 @@ function getArtists() {
     // get artist data from the server
     $.ajax({
         method: 'GET',
-        url: '/artist'
+        url: '/jazzyRouter'
     }).then(function(response) {
         const listOfArtists = response;
         renderArtists(response);
@@ -79,7 +79,7 @@ function getSongs() {
     // get song data from the server
     $.ajax({
         method: 'GET',
-        url: '/song'
+        url: '/jazzyRouter'
     }).then(function (response) {
         renderSongs(response);
     }).catch(function (error) {
