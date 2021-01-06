@@ -51,7 +51,7 @@ function addSong() {
     // Send the new artist to the server as data
     $.ajax({
         method: 'POST',
-        url: '/jazzyRouter',
+        url: '/songRouter',
         data: newSong
     }).then(function(response) {
         console.log(response);
@@ -79,7 +79,7 @@ function getSongs() {
     // get song data from the server
     $.ajax({
         method: 'GET',
-        url: '/jazzyRouter'
+        url: '/songRouter'
     }).then(function (response) {
         renderSongs(response);
     }).catch(function (error) {

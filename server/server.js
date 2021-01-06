@@ -12,6 +12,10 @@ app.use(express.static('server/public'));
 let jazzyRouter = require('./routes/jazzyRouter');
 app.use('/jazzyRouter', jazzyRouter);
 
+let songRouter = require('./routes/songRouter');
+app.use('/songRouter', songRouter);
+
+
 const PORT = 5000;
 app.listen(PORT, () => {
     console.log('listening on port', PORT)
